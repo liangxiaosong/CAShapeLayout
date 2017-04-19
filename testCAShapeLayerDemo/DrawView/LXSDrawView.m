@@ -7,7 +7,7 @@
 //
 
 #import "LXSDrawView.h"
-#import "LJBaseModel.h"
+#import "LXSBaseModel.h"
 
 //////////////////////////////////////////////////////////////
 
@@ -64,7 +64,7 @@
 
 //linyl
 //记录脚本用
-@property (nonatomic, strong) LSDrawFile            *dwawFile;
+@property (nonatomic, strong) LXSDrawFile            *dwawFile;
 //每次touchsbegin的时间，后续为计算偏移量用
 @property (nonatomic, strong) NSDate                *beginDate;
 
@@ -95,13 +95,13 @@
 
         [_composeView addSubview:_canvasView];
 
-        _brushColor = LSDEF_BRUSH_COLOR;
-        _brushWidth = LSDEF_BRUSH_WIDTH;
+        _brushColor = LXSDEF_BRUSH_COLOR;
+        _brushWidth = LXSDEF_BRUSH_WIDTH;
         _isEraser = NO;
-        _shapeType = LSDEF_BRUSH_SHAPE;
+        _shapeType = LXSDEF_BRUSH_SHAPE;
 
         //linyl
-        _dwawFile = [LSDrawFile new];
+        _dwawFile = [LXSDrawFile new];
         _dwawFile.packageArray = [NSMutableArray new];
     }
     return self;
@@ -128,12 +128,12 @@
     //linyl
     _beginDate = [NSDate date];
 
-    LSBrushModel *brushModel = [[LSBrushModel alloc] init];
+    LXSBrushModel *brushModel = [[LXSBrushModel alloc] init];
     brushModel.brushColor = _brushColor;
     brushModel.brushWidth = _brushWidth;
     brushModel.shapeType = _shapeType;
     brushModel.isEraser = _isEraser;
-    brushModel.beginPoint = [LSPointModel new];
+    brushModel.beginPoint = [LXSPointModel new];
     brushModel.beginPoint.xPoint = point.x;
     brushModel.beginPoint.yPoint = point.y;
     brushModel.beginPoint.timeOffset = 0;
@@ -143,11 +143,11 @@
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     CGPoint point = [[touches anyObject] locationInView:self];
-    LXSBrush *brush = [_brushArray lastObject];
+    LXSBrush *brush = [self.brushArray lastObject];
     //linyl
-    LSDrawPackage *drawPackage = [_dwawFile.packageArray lastObject];
+    LXSDrawPackage *drawPackage = [_dwawFile.packageArray lastObject];
 
-    LSPointModel *pointModel = [[LSPointModel alloc] init];
+    LXSPointModel *pointModel = [[LXSPointModel alloc] init];
     pointModel.xPoint = point.x;
     pointModel.yPoint = point.y;
     pointModel.timeOffset = fabs(_beginDate.timeIntervalSinceNow);
@@ -219,17 +219,17 @@
     //linyl
     CGPoint point = [[touches anyObject] locationInView:self];
 
-    LSBrushModel *brushModel = [LSBrushModel new];
+    LXSBrushModel *brushModel = [LXSBrushModel new];
     brushModel.brushColor = _brushColor;
     brushModel.brushWidth = _brushWidth;
     brushModel.shapeType = _shapeType;
     brushModel.isEraser = _isEraser;
-    brushModel.endPoint = [LSPointModel new];
+    brushModel.endPoint = [LXSPointModel new];
     brushModel.endPoint.xPoint = point.x;
     brushModel.endPoint.yPoint = point.y;
     brushModel.endPoint.timeOffset = fabs(_beginDate.timeIntervalSinceNow);;
 
-    LSDrawPackage *drawPackage = [_dwawFile.packageArray lastObject];
+    LXSDrawPackage *drawPackage = [_dwawFile.packageArray lastObject];
 
     [drawPackage.pointOrBrushArray addObject:brushModel];
 
@@ -277,9 +277,9 @@
     [fileManager removeItemAtPath:picPath error:nil];
 }
 
-- (void)addModelToPackage:(LSDrawModel*)drawModel
+- (void)addModelToPackage:(LXSDrawModel*)drawModel
 {
-    LSDrawPackage *drawPackage = [LSDrawPackage new];
+    LXSDrawPackage *drawPackage = [LXSDrawPackage new];
     drawPackage.pointOrBrushArray = [NSMutableArray new];
 
     [drawPackage.pointOrBrushArray addObject:drawModel];

@@ -17,7 +17,7 @@
 		195E851A1EA6FE070097E12E /* LXSDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 195E85191EA6FE070097E12E /* LXSDrawView.m */; };
 		195E851D1EA6FE1E0097E12E /* LXSBottomControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 195E851C1EA6FE1E0097E12E /* LXSBottomControllerView.m */; };
 		195E85201EA6FECF0097E12E /* LXSTopControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 195E851F1EA6FECF0097E12E /* LXSTopControllerView.m */; };
-		195E85291EA701350097E12E /* LJBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 195E85231EA701350097E12E /* LJBaseModel.m */; };
+		195E85291EA701350097E12E /* LXSBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 195E85231EA701350097E12E /* LXSBaseModel.m */; };
 		195E852A1EA701350097E12E /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 195E85251EA701350097E12E /* NSObject+YYModel.m */; };
 		195E852B1EA701350097E12E /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 195E85271EA701350097E12E /* YYClassInfo.m */; };
 		7733A9CCBCE6D923C745BB19 /* libPods-testCAShapeLayerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1DCD5B712EC8E1FCF765DE /* libPods-testCAShapeLayerDemo.a */; };
@@ -53,8 +53,8 @@
 		195E851C1EA6FE1E0097E12E /* LXSBottomControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXSBottomControllerView.m; sourceTree = "<group>"; };
 		195E851E1EA6FECF0097E12E /* LXSTopControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXSTopControllerView.h; sourceTree = "<group>"; };
 		195E851F1EA6FECF0097E12E /* LXSTopControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXSTopControllerView.m; sourceTree = "<group>"; };
-		195E85221EA701350097E12E /* LJBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJBaseModel.h; sourceTree = "<group>"; };
-		195E85231EA701350097E12E /* LJBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJBaseModel.m; sourceTree = "<group>"; };
+		195E85221EA701350097E12E /* LXSBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXSBaseModel.h; sourceTree = "<group>"; };
+		195E85231EA701350097E12E /* LXSBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXSBaseModel.m; sourceTree = "<group>"; };
 		195E85241EA701350097E12E /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
 		195E85251EA701350097E12E /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
 		195E85261EA701350097E12E /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
@@ -165,8 +165,8 @@
 		195E85211EA701350097E12E /* YYModel */ = {
 			isa = PBXGroup;
 			children = (
-				195E85221EA701350097E12E /* LJBaseModel.h */,
-				195E85231EA701350097E12E /* LJBaseModel.m */,
+				195E85221EA701350097E12E /* LXSBaseModel.h */,
+				195E85231EA701350097E12E /* LXSBaseModel.m */,
 				195E85241EA701350097E12E /* NSObject+YYModel.h */,
 				195E85251EA701350097E12E /* NSObject+YYModel.m */,
 				195E85261EA701350097E12E /* YYClassInfo.h */,
@@ -346,7 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				195E85291EA701350097E12E /* LJBaseModel.m in Sources */,
+				195E85291EA701350097E12E /* LXSBaseModel.m in Sources */,
 				195E85201EA6FECF0097E12E /* LXSTopControllerView.m in Sources */,
 				195D20211EA5F713001DE1A9 /* ViewController.m in Sources */,
 				195E852A1EA701350097E12E /* NSObject+YYModel.m in Sources */,

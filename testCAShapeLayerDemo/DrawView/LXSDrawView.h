@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#define LSDEF_BRUSH_COLOR [UIColor colorWithRed:255 green:0 blue:0 alpha:1.0]
+#define LXSDEF_BRUSH_COLOR [UIColor colorWithRed:255 green:0 blue:0 alpha:1.0]
 
-#define LSDEF_BRUSH_WIDTH 3
+#define LXSDEF_BRUSH_WIDTH 3
 
-#define LSDEF_BRUSH_SHAPE LXSShapeCurve
+#define LXSDEF_BRUSH_SHAPE LXSShapeCurve
 
 //画笔形状
 typedef NS_ENUM(NSInteger, LXSShapeType)

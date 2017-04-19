@@ -6,11 +6,11 @@
 //  Copyright © 2016年 linyoulu. All rights reserved.
 //
 
-#import "LJBaseModel.h"
+#import "LXSBaseModel.h"
 #import "YYModel.h"
 
 
-@implementation LJBaseModel
+@implementation LXSBaseModel
 
 -(void)encodeWithCoder:(NSCoder *)aCoder{
 
@@ -50,32 +50,32 @@
 
 @end
 
-@implementation LSDrawModel
+@implementation LXSDrawModel
 
 
 @end
 
-@implementation LSPointModel
+@implementation LXSPointModel
 
 
 @end
 
-@implementation LSBrushModel
+@implementation LXSBrushModel
 
 
 @end
 
-@implementation LSActionModel
+@implementation LXSActionModel
 
 
 @end
 
-@implementation LSDrawPackage
+@implementation LXSDrawPackage
 
 
 @end
 
-@implementation LSDrawFile
+@implementation LXSDrawFile
 
 
 @end
