@@ -323,4 +323,11 @@
 
 }
 
+#pragma mark - set / get
+
+- (void)setBackgroundImage:(UIImage *)backgroundImage {
+    _backgroundImage = backgroundImage;
+    self.layer.contents = (id)backgroundImage.CGImage;
+}
+
 @end

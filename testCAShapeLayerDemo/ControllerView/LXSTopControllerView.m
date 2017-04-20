@@ -8,6 +8,8 @@
 
 #import "LXSTopControllerView.h"
 
+#define buttonWidth (UI_SCREEN_WIDTH - (self.dataArray.count + 1) * 10)/ self.dataArray.count
+
 @interface LXSTopControllerView ()
 
 @property (nonatomic, strong) NSMutableArray            *dataArray;
@@ -33,7 +35,7 @@
         [button mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(self.mas_centerY);
             make.left.equalTo(tempBtn ? tempBtn.mas_right : self.mas_left).offset(10);
-            make.size.mas_equalTo(CGSizeMake((UI_SCREEN_WIDTH - 50)/ self.dataArray.count, self.bounds.size.height));
+            make.size.mas_equalTo(CGSizeMake(buttonWidth, self.bounds.size.height));
         }];
         tempBtn = button;
 
@@ -45,8 +47,12 @@
     }
 }
 
+#pragma mark --- active
+
 - (void)activeButton:(UIButton *)sender {
-    
+    if (self.buttonBlack) {
+        self.buttonBlack(sender.tag);
+    }
 }
 
 @end

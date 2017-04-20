@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface LXSTopControllerView : UIView
+//按钮点击事件的回调
+@property (nonatomic, copy) void (^buttonBlack) (NSInteger tag);
 
 @end
