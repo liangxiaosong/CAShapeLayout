@@ -10,4 +10,6 @@
 
 @interface LXSBottomControllerView : UIView
 
+@property (nonatomic, copy) void (^buttonTagBlock) (NSInteger tag);
+
 @end

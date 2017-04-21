@@ -46,6 +46,9 @@ UIImagePickerControllerDelegate>
     //底部 工具栏
     LXSBottomControllerView *bottomView = [[LXSBottomControllerView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(drawView.frame), UI_SCREEN_WIDTH, 50)];
     [self.view addSubview:bottomView];
+    [bottomView setButtonTagBlock:^(NSInteger tag){
+        [self bottomViewButtonTag:tag];
+    }];
 
 }
 
@@ -69,6 +72,12 @@ UIImagePickerControllerDelegate>
         //按钮：取消，类型：UIAlertActionStyleCancel
         [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
         [self presentViewController:alert animated:YES completion:nil];
+    }
+}
+
+- (void)bottomViewButtonTag:(NSInteger)tag {
+    if (tag == 0) {//圆
+        
     }
 }
 
