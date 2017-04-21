@@ -77,7 +77,13 @@ UIImagePickerControllerDelegate>
 
 - (void)bottomViewButtonTag:(NSInteger)tag {
     if (tag == 0) {//圆
-        
+        drawView.shapeType = LXSRound;
+    }else if (tag == 1) {
+        drawView.shapeType = LXSShapeEllipse;
+    }else if (tag == 2) {
+        drawView.shapeType = LXSShapeRect;
+    }else {
+        drawView.shapeType = LXSLove;
     }
 }
 

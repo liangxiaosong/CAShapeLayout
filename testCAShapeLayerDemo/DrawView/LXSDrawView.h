@@ -21,6 +21,8 @@ typedef NS_ENUM(NSInteger, LXSShapeType)
     LXSShapeLine,//直线
     LXSShapeEllipse,//椭圆
     LXSShapeRect,//矩形
+    LXSRound,//圆
+    LXSLove,//爱心
 
 };
 

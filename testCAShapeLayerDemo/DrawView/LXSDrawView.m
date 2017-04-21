@@ -179,12 +179,22 @@
                 break;
             case LXSShapeEllipse://椭圆
             {
-
+                brush.bezierPath = [UIBezierPath bezierPathWithOvalInRect:[self getRectWithStartPoint:brush.beginPoint endPoint:point]];
             }
                 break;
             case LXSShapeRect://矩形
             {
-
+                brush.bezierPath = [UIBezierPath bezierPathWithRect:[self getRectWithStartPoint:brush.beginPoint endPoint:point]];
+            }
+                break;
+            case LXSRound://圆
+            {
+                brush.bezierPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(brush.beginPoint.x, brush.beginPoint.y, [self getRectWithStart:brush.beginPoint end:point], [self getRectWithStart:brush.beginPoint end:point])];
+            }
+                break;
+            case LXSLove://爱心
+            {
+                
             }
                 break;
             default:
@@ -321,6 +331,24 @@
         });
     }
 
+}
+
+#pragma mark - 画图形
+//椭圆
+- (CGRect)getRectWithStartPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint {
+    CGFloat x = startPoint.x <= endPoint.x ? startPoint.x : endPoint.x;
+    CGFloat y = startPoint.y <= endPoint.y ? startPoint.y : endPoint.y;
+    CGFloat width = fabs(startPoint.x - endPoint.x);
+    CGFloat height = fabs(startPoint.y - endPoint.y);
+    return CGRectMake(x, y, width, height);
+}
+
+//半径
+- (CGFloat)getRectWithStart:(CGPoint)start end:(CGPoint)end {
+    CGFloat x = fabs(start.x - end.x);
+    CGFloat y = fabs(start.y - end.y);
+    CGFloat radii = sqrt(x * x + y * y);
+    return radii;
 }
 
 #pragma mark - set / get
